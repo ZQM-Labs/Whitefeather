@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "whitefeather-tools"
+version = "0.1.0"
+description = "WhiteFeather property-scale radio observability tools"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "zqm-intel-platforms>=0.1.0",
+]
+
+[project.scripts]
+wf-fingerprint-sync = "wf_fingerprint_sync:main"
+wf-propagation-manifest = "wf_propagation_manifest:main"
+wf-validate-survey = "wf_validate_survey:main"
+wf-heatmap-export = "wf_heatmap_export:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+src = ["tools", "tests"]
+
+[tool.mypy]
+strict = true
+disable_error_code = ["type-arg", "no-any-return"]
+files = ["tools", "tests"]
