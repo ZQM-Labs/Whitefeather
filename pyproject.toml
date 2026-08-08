@@ -19,6 +19,16 @@ wf-propagation-manifest = "wf_propagation_manifest:main"
 wf-validate-survey = "wf_validate_survey:main"
 wf-heatmap-export = "wf_heatmap_export:main"
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "mypy>=1.0",
+    "bandit>=1.7",
+    "codespell>=2.0",
+    "pre-commit>=3.0",
+    "ruff>=0.5",
+]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
