@@ -50,3 +50,18 @@ MIT — see LICENSE file.
 
 Alex Zelenski — zqmcomputing@gmail.com
 Brand: ZQM Computing / ZQM-Labs
+
+## Survey CSV Format
+
+```csv
+timestamp,bssid,ssid,channel,rssi,site_id
+2026-01-01T00:00:00Z,AA:BB:CC:DD:EE:FF,MyWifi,6,-75,site1
+```
+
+Required columns:
+- `timestamp` — ISO 8601
+- `bssid` — MAC address
+- `ssid` — network name
+- `channel` — WiFi channel
+- `rssi` — signal strength in dBm
+- `site_id` — survey location identifier
