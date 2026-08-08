@@ -22,9 +22,11 @@ wf-heatmap-export = "wf_heatmap_export:main"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
-[tool.ruff.lint]
+[tool.ruff]
 target-version = "py311"
 src = ["tools", "tests"]
+
+[tool.ruff.lint]
 
 [tool.mypy]
 strict = true
